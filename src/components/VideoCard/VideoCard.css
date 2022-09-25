@@ -1,0 +1,85 @@
+.videocard {
+    width: 270px;
+    margin-bottom: 40px;
+}
+
+.videocard__image {
+    height: 140px;
+    width: 250px;
+}
+
+.videocard__info {
+    margin-top: 10px;
+    padding-right: 30px;
+}
+
+.videocard__text {
+    margin-left: 15px;
+}
+
+.videocard__text > h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.videocard__text > p {
+    font-size: 14px;
+}
+
+.videocard__avatar {
+    height: 30px !important;
+    width: 30px !important;
+    position: relative;
+
+}
+
+.videocard__text > * {
+    margin: 1px;
+}
+.modal-fixed{
+    position:fixed;
+    top:10%;
+    left:15%;
+    height: 67vh;
+    width: 130vh ;
+    align-items: center;
+}
+
+.video-90vw
+{
+  display: inline-block;
+  height: 67vh; 
+  width: 130vh
+
+}
+
+.modal-fixed-mobile{
+    position:fixed;
+    top:12%;
+    height: 60vh;
+    width: 51vh ;
+    margin-right: 0px;
+    margin-left: 7px;
+    background-color: #00000098;
+
+}
+
+.video-90vw-mobile
+{
+  display: inline-block;
+  height: 60vh;
+  width: 51vh;
+}
+.modal-absolute {
+    position: absolute;
+    z-index: 40;
+
+}
+.general-position{
+    position: absolute;
+
+}
+.size-close-modal{
+   height: 30px;
+   width: 30px;
+}

@@ -1,0 +1,18 @@
+.sidebar {
+    flex: 0;
+}
+.sidebar-mobile{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    margin-right: 30px;
+    z-index: 2;
+    background-color: white;
+}
+.sidebar > hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

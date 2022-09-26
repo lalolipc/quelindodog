@@ -11,10 +11,11 @@ import Perfil from "../Perfil/Perfil";
 interface TopPromptProps {
   setIdList: any,
   idList: any,
-  showSideBar: boolean
+  showSideBar: boolean,
+  setShowSideBar: any;
 }
 
-const HomeScreen: React.FC<TopPromptProps>  = ({showSideBar=false, setIdList, idList}) => {
+const HomeScreen: React.FC<TopPromptProps>  = ({showSideBar=false, setIdList, idList, setShowSideBar}) => {
     const [widthView, setWidthView] = useState(0);
   
     useEffect(() => {
@@ -30,22 +31,47 @@ const HomeScreen: React.FC<TopPromptProps>  = ({showSideBar=false, setIdList, id
               }
               <div className="app__mainpage  flex-videos">
                 {idList === '1' &&
-                  <RecommendedVideos idMyList={'PLmIQOiA1GP0yffwE7uu2XpxPtEiz-mDjH'} maxItems={20} dataList={dataEnglish as any} />
+                  <RecommendedVideos 
+                    idMyList={'PLmIQOiA1GP0yffwE7uu2XpxPtEiz-mDjH'}
+                    maxItems={20} 
+                    dataList={dataEnglish as any} 
+                    setShowSideBar={setShowSideBar}
+                    />
                 }
                 {idList === '2' &&
-                  <RecommendedVideos idMyList={'PLmIQOiA1GP0ykrOO2s0StHv82V8axUP04'} maxItems={20} dataList={dataSpanish as any}/>
+                  <RecommendedVideos
+                   idMyList={'PLmIQOiA1GP0ykrOO2s0StHv82V8axUP04'}
+                    maxItems={20}
+                     dataList={dataSpanish as any}
+                     setShowSideBar={setShowSideBar}
+                     />
                 }
                 {idList === '3' &&
-                  <RecommendedVideos idMyList={'PLmIQOiA1GP0zDC7cJRa4DD6UOsLVNHQqC'} maxItems={10} dataList={dataChinese as any}/>
+                  <RecommendedVideos
+                   idMyList={'PLmIQOiA1GP0zDC7cJRa4DD6UOsLVNHQqC'}
+                    maxItems={10}
+                     dataList={dataChinese as any}
+                     setShowSideBar={setShowSideBar}
+                     />
                 }
                 {idList === '4' &&
-                  <RecommendedVideos idMyList={'PLmIQOiA1GP0z11eO76Mfe-bwedSQlI5lK'} maxItems={20} dataList={dataRussian as any}/>
+                  <RecommendedVideos
+                   idMyList={'PLmIQOiA1GP0z11eO76Mfe-bwedSQlI5lK'}
+                    maxItems={20}
+                     dataList={dataRussian as any}
+                     setShowSideBar={setShowSideBar}
+                     />
                 }
                 {idList === '5' &&
-                  <RecommendedVideos idMyList={'PLmIQOiA1GP0znpsfk4vQmDUGJyAMjnTLL'} maxItems={10} dataList={dataFrench as any}/>
+                  <RecommendedVideos
+                   idMyList={'PLmIQOiA1GP0znpsfk4vQmDUGJyAMjnTLL'}
+                    maxItems={10}
+                     dataList={dataFrench as any}
+                     setShowSideBar={setShowSideBar}
+                     />
                 }
                 {idList === '6' &&
-                  <Perfil />
+                  <Perfil  setShowSideBar={setShowSideBar}/>
                 }
 
               </div>

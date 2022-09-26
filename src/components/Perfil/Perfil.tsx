@@ -2,19 +2,22 @@ import React, { useEffect, useState } from 'react';
 import './Perfil.css';
 import Avatar from '@material-ui/core/Avatar';
 
-
-const Perfil: React.FC = () => {
+interface PerfilProps{
+  setShowSideBar: any;
+}
+const Perfil: React.FC<PerfilProps> = ({setShowSideBar}) => {
 
   const [widthView, setWidthView] = useState(0);
   
   useEffect(() => {
-    setWidthView(window.innerWidth)
+    setWidthView(window.innerWidth);
+    setShowSideBar(false);
   }, [])
 
 
   return (
     <>
-              <div className={`index ${widthView > 540 ? " modal-fixed" : "m-auto px-5 pt-10" }`} >
+              <div className={`index ${widthView > 540 ? "m-auto md:px-40 lg:px-64 pt-10" : "m-auto px-5 pt-10" }`} >
            <div >
 
              <div role="switch" aria-checked={"true"} tabIndex={0}  className={`grid h-full flex-row md:mt-24 xs:p-5 xs:mt-28 dg-fadeInFromTop`}>

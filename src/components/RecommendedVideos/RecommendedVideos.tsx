@@ -7,9 +7,10 @@ import Alert from '@material-ui/lab/Alert';
 interface TopPromptProps {
   idMyList?: any,
   maxItems?: any,
-  dataList?:any
+  dataList?:any,
+  setShowSideBar: any
 }
-const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems='' ,dataList = null}):any => {
+const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems='' ,dataList = null, setShowSideBar}):any => {
   const [videoCards, setVideoCards] = useState([] as any);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -21,12 +22,12 @@ const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems='' 
   const [widthView, setWidthView] = useState(0);
 
   const openModal = (res:any) => {
-    console.log('999',res)
     const resultIni = res?.split("watch?v=");
     const newUrl:string = resultIni[0] + 'embed/' + resultIni[1];
     const urlFinal=newUrl.concat('?autoplay=1&loop=1');
     setUrlVideo(urlFinal);
     setShow(true);
+    setShowSideBar(false);
   }
   useEffect(() => {
     axios

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import SideBarRow from '../SideBarRow/SideBarRow';
 import './SideBar.css';
 import confetti from 'canvas-confetti';

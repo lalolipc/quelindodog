@@ -4,14 +4,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Avatar from '@material-ui/core/Avatar';
 interface HeaderProps {
   onClick: any,
+  setIdList: any;
 }
-  const Header: React.FC<HeaderProps>=({onClick})=> {
+  const Header: React.FC<HeaderProps>=({onClick,setIdList})=> {
   const [widthView, setWidthView] = useState(0)
-  const [show, setShow] = useState(false)
 
   const openModal = () => {
 
-    setShow(true)
+    setIdList('6');
   }
   useEffect(() => {
     setWidthView(window.innerWidth)

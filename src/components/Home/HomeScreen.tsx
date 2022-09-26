@@ -6,14 +6,19 @@ import { dataSpanish } from '../../data/dataSpanish';
 import { dataChinese } from '../../data/dataChinese';
 import { dataRussian } from '../../data/dataRussian';
 import { dataFrench } from '../../data/dataFrench';
+import Perfil from "../Perfil/Perfil";
 
-const HomeScreen = ({showSideBar=false}) => {
+interface TopPromptProps {
+  setIdList: any,
+  idList: any,
+  showSideBar: boolean
+}
+
+const HomeScreen: React.FC<TopPromptProps>  = ({showSideBar=false, setIdList, idList}) => {
     const [widthView, setWidthView] = useState(0);
-    const [idList, setIdList] = useState('1');
   
     useEffect(() => {
       setWidthView(window.innerWidth)
-      // setIdList(idList)  
     }, [])
 
     return (
@@ -39,8 +44,12 @@ const HomeScreen = ({showSideBar=false}) => {
                 {idList === '5' &&
                   <RecommendedVideos idMyList={'PLmIQOiA1GP0znpsfk4vQmDUGJyAMjnTLL'} maxItems={10} dataList={dataFrench as any}/>
                 }
+                {idList === '6' &&
+                  <Perfil />
+                }
 
               </div>
+
             </div> 
     )
 }

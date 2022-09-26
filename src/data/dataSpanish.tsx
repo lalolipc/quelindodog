@@ -68,7 +68,7 @@ export const dataSpanish: any = [
       'image': "https://i.ytimg.com/vi/9U96AXr9eBM/maxresdefault.jpg",
       'channelImage': "https://i.ytimg.com/vi/9U96AXr9eBM/maxresdefault.jpg",
       'channel': "Spanish",      
-    
+      'idUrl':"9U96AXr9eBM" 
     },
     {
       'url': "https://www.youtube.com/watch?v=WhXZaxeZ5sg",
@@ -92,40 +92,54 @@ export const dataSpanish: any = [
       'idUrl':"aD5pRgDoYuw"       
     },
     {
-      'url': "https://www.youtube.com/watch?v=l28AVVT_Yq8",
-      'title': "Letter Sounds R | Patty Shukla ",
+      'url': "https://www.youtube.com/watch?v=c6BVOQfgMP8",
+      'title': "Canción de los Colores en Inglés y Español Doremi ",
       'views': "Learn",
       'timestamp': "",
-      'image': "https://i.ytimg.com/vi/l28AVVT_Yq8/maxresdefault.jpg",
-      'channelImage': "https://i.ytimg.com/vi/l28AVVT_Yq8/maxresdefault.jpg",
-      'channel': "Spanish"
+      'image': "https://i.ytimg.com/vi/c6BVOQfgMP8/maxresdefault.jpg",
+      'channelImage': "https://i.ytimg.com/vi/c6BVOQfgMP8/maxresdefault.jpg",
+      'channel': "Spanish",
+      'idUrl':"c6BVOQfgMP8"
     },
     {
-      'url': "https://www.youtube.com/watch?v=a97wruxm3go",
-      'title': "Learn ABC Jack Hartmann ",
+      'url': "https://www.youtube.com/watch?v=PczrkyAZZJ4",
+      'title': "Plim Plim - Aprendemos los Colores",
       'views': "Learn",
       'timestamp': "",
-      'image': "https://i.ytimg.com/vi/a97wruxm3go/maxresdefault.jpg",
-      'channelImage': "https://i.ytimg.com/vi/a97wruxm3go/maxresdefault.jpg",
-      'channel': "Spanish"
+      'image': "https://i.ytimg.com/vi/PczrkyAZZJ4/maxresdefault.jpg",
+      'channelImage': "https://i.ytimg.com/vi/PczrkyAZZJ4/maxresdefault.jpg",
+      'channel': "Spanish",
+      'idUrl':"PczrkyAZZJ4"
     },
     {
-      'url': "https://www.youtube.com/watch?v=g2jdZ46nK-M",
-      'title': "Shapes for Dream English Kids ",
+      'url': "https://www.youtube.com/watch?v=gGBeyG1BKUY",
+      'title': "La canción de las formas ",
       'views': "Learn",
       'timestamp': "",
-      'image': "https://i.ytimg.com/vi/g2jdZ46nK-M/maxresdefault.jpg",
-      'channelImage': "https://i.ytimg.com/vi/g2jdZ46nK-M/maxresdefault.jpg",
-      'channel': "Spanish"
+      'image': "https://i.ytimg.com/vi/gGBeyG1BKUY/maxresdefault.jpg",
+      'channelImage': "https://i.ytimg.com/vi/gGBeyG1BKUY/maxresdefault.jpg",
+      'channel': "Spanish",
+      'idUrl':"gGBeyG1BKUY"
     },
     {
-      'url': "https://www.youtube.com/watch?v=tVlcKp3bWH8",
-      'title': "Hello! | Super Simple Songs ",
+      'url': "https://www.youtube.com/watch?v=kbAtNXQkklo",
+      'title': "Canción Abre Cierra ",
       'views': "Learn",
       'timestamp': "",
-      'image': "https://i.ytimg.com/vi/tVlcKp3bWH8/maxresdefault.jpg",
-      'channelImage': "https://i.ytimg.com/vi/tVlcKp3bWH8/maxresdefault.jpg",
-      'channel': "Spanish"
+      'image': "https://i.ytimg.com/vi/kbAtNXQkklo/maxresdefault.jpg",
+      'channelImage': "https://i.ytimg.com/vi/kbAtNXQkklo/maxresdefault.jpg",
+      'channel': "Spanish",
+      'idUrl':"kbAtNXQkklo"
+    },
+    {
+      'url': "https://www.youtube.com/watch?v=PHPbg9x8Gvs",
+      'title': "¿Cuál Es Tu Color Favorito?",
+      'views': "Learn",
+      'timestamp': "",
+      'image': "https://i.ytimg.com/vi/PHPbg9x8Gvs/maxresdefault.jpg",
+      'channelImage': "https://i.ytimg.com/vi/PHPbg9x8Gvs/maxresdefault.jpg",
+      'channel': "Spanish",
+      'idUrl':"PHPbg9x8Gvs"
     }
 
   ]

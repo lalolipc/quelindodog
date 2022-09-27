@@ -51,8 +51,9 @@ const VideoCard = ({ image='', title='', channel='' }) => {
           </div>
         </div>
       }
-      <div className='videocard pointer'>
-        <img className='videocard__image pointer' src={image} alt='' />
+      { image &&
+      <div className='videocard pointer animate__animated animate__fadeIn'>
+        <img className='videocard__image pointer  ' src={image} alt='' />
         <div className="videocard__info">
 
           <div className="videocard__text ">
@@ -61,6 +62,7 @@ const VideoCard = ({ image='', title='', channel='' }) => {
           </div>
         </div>
       </div>
+      }
     </>
   )
 }

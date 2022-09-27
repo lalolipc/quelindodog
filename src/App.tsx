@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React,{ useState } from 'react'
 import './App.css'
 import 'animate.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
@@ -18,8 +18,7 @@ function App() {
         <Header
           onClick={() => openSideBar()} setIdList={setIdList}/>
         <Routes>
-           <Route  path="/" element={<HomeScreen showSideBar={showSideBar} setShowSideBar={setShowSideBar} setIdList={setIdList} idList={idList}/>} ></Route>           
-
+           <Route  path="/" element={<HomeScreen showSideBar={showSideBar} setShowSideBar={setShowSideBar} setIdList={setIdList} idList={idList}/>} ></Route>  
         </Routes>
       </BrowserRouter>
     </div>

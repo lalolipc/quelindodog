@@ -31,7 +31,7 @@ interface HeaderProps {
           </div> 
           
         <div className="header__right mr-5">
-          <button onClick={() => openModal()} className="block ml-auto">
+          <button onClick={() => openModal()} className="block ml-auto">   
             <Avatar
               alt='Tiziano'
               src='/tizi.jpg'

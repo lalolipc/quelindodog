@@ -34,7 +34,7 @@ export const SideBar: React.FC<TopPromptProps>  = ({ setIdList, widthView = 0, s
     }
     const onClick = (number: string) => {
         setIdList(number);
-        let locationCanva=getLocationCanva(number);
+        const locationCanva=getLocationCanva(number);
         confetti({
           particleCount: 70,
           spread: 70,
@@ -45,7 +45,7 @@ export const SideBar: React.FC<TopPromptProps>  = ({ setIdList, widthView = 0, s
         <div className={`animate__animated ${widthView > 540 ? 'sidebar' : 'sidebar-mobile' } ${showSideBar ? 'animate__fadeInLeft' : '' }` }> 
             <button onClick={() =>onClick('1')}>
                 <SideBarRow url="https://2.bp.blogspot.com/-Tsm4oXVoYik/XEzeCFRjQ1I/AAAAAAAAHIM/VqxZ-hbI2Qcaq6llAHzGTX56jC7bmrkAwCK4BGAYYCw/s640/Flag%2BUnited%2BStates.png" title='English' />              
-            </button>
+            </button> 
             <button onClick={()  =>onClick('2')}>
                 <SideBarRow url="https://4.bp.blogspot.com/-ESGFmY9BLNE/XEysE63C_tI/AAAAAAAAHEc/svSz8ScwXXQc-Qph_591KVteI4cq52xdACK4BGAYYCw/s1600/Argentina%2BFlag.png" title='Spanish' />
             </button>

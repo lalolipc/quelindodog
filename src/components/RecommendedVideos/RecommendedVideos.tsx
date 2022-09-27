@@ -1,22 +1,18 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import VideoCard from '../VideoCard/VideoCard';
 import './RecommendedVideos.css';
 import axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Alert from '@material-ui/lab/Alert';
 interface TopPromptProps {
-  idMyList?: any,
-  maxItems?: any,
-  dataList?:any,
+  idMyList?: string,
+  maxItems?: number,
+  dataList?:string,
   setShowSideBar: any
 }
-const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems='' ,dataList = null, setShowSideBar}):any => {
+const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems=0 ,dataList = null, setShowSideBar}):any => {
   const [videoCards, setVideoCards] = useState([] as any);
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState([]);
   const [isError, setIsError] = useState(false);
-  const idL = 'PLmIQOiA1GP0yffwE7uu2XpxPtEiz-mDjH'
-  const YOUTUBE_PLAY_LIST_ITEMS = 'https://www.googleapis.com/youtube/v3/playlistItems'
   const [urlVideo, setUrlVideo] = useState('')
   const [show, setShow] = useState(false)
   const [widthView, setWidthView] = useState(0);
@@ -47,14 +43,14 @@ const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems='' 
 
 
   async function createVideoCards(videoItems: any) {
-    let newVideoCards:any = [];
+    const newVideoCards: any = [];
     for (const video of videoItems) {
       const videoId = video.id;
       const snippet = video.snippet;
       const channelId = snippet.channelId;
-      const response = await axios
-        .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${`AIzaSyAg-wyIVJRRaGd3NMa6mIt32NdUJNPhXTo`}`)
-      const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
+      // const response = await axios
+      //   .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${`AIzaSyAg-wyIVJRRaGd3NMa6mIt32NdUJNPhXTo`}`)
+      // const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
 
       const title = snippet.title;
       const image = snippet?.thumbnails?.medium?.url;
@@ -71,21 +67,24 @@ const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems='' 
         channel,
         views,
         timestamp,
-        channelImage,
         idUrl
       });
-    };
+    }
     setVideoCards(newVideoCards);
    
     setIsLoading(false);
   }
 
-if(videoCards.length == 0 ){
+// if(videoCards.length == 0 ){
+//   setVideoCards(dataList);
+//   setIsError(false);
+//   setIsLoading(false)
+// }
+ if(isError) {
   setVideoCards(dataList);
   setIsError(false);
   setIsLoading(false)
-}
-
+  }
   // if(isError) {
   //   return <Alert severity="error" className='loading'>No Results found!</Alert>
   // }
@@ -119,15 +118,17 @@ if(videoCards.length == 0 ){
           {            
             videoCards.map((item: any, index: string)=> {
               return (
+                item &&
                 <div key={index} className="pointer">
-                  <button onClick={() => openModal(`https://www.youtube.com/watch?v=${item.idUrl}`)} className="block ml-auto">
+                  <button onClick={() => openModal(`https://www.youtube.com/watch?v=${item?.idUrl}`)} className="block ml-auto">
                     <VideoCard
-                      title={item.title}
-                      image={item.image}
-                      channel={item.channel}
+                      title={item?.title ?? ''}
+                      image={item?.image  ?? ''}
+                      channel={item?.channel  ?? ''}
                     />
                   </button>
                 </div>
+            
               )
             })           
           }

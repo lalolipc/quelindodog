@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react';
 import './Perfil.css';
 import Avatar from '@material-ui/core/Avatar';

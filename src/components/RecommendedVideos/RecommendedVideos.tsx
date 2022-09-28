@@ -110,8 +110,11 @@ const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems=0 ,
       }
 
 
-    { isLoading? 
-  <CircularProgress  className={`${widthView < 540 ? 'loading ml-40': 'loading ml-10' }`} color='secondary' /> : 
+   { isLoading? 
+    <div className={`recommendedvideos__videos w-screen ${widthView < 540 ? 'pt-20': 'md:pt-10' }`}>
+     <CircularProgress  className={` loading grid place-content-center m-auto h-screen `} color='secondary' /> 
+    </div>
+     : 
   <>
   {!show && 
   <div className={`recommendedvideos__videos ${widthView < 540 ? 'recommendedvideos__mobile': 'recommendedvideos__desktop mt-5 flex justify-start' }`}>        

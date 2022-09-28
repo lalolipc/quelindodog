@@ -8,11 +8,7 @@ a {
 }
 
 .loading {
-  /* display: block !important;  */
-  display: grid; 
-  align-items: center;
-  /* width: 50%;
-  margin: auto; */
+  margin: auto !important; 
 }
 .flex-videos{
   flex-wrap: wrap

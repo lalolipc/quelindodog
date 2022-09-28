@@ -27,7 +27,7 @@ const RecommendedVideos: React.FC<TopPromptProps> = ({ idMyList='', maxItems=0 ,
   }
   useEffect(() => {
     axios
-      .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${idMyList}&maxResults=${maxItems}&key=${`AIzaSyAg-wyIVJRRaGd3NMa6mIt32NdUJNPhXTo`}`)
+      .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${idMyList}&maxResults=${maxItems}&key=${import.meta.env.VITE_REACT_APP_YOUTUBE_API_KEY}`)
       .then(response => {
         createVideoCards(response.data.items );        
       })

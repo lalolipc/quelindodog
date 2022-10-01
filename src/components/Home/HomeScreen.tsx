@@ -20,6 +20,10 @@ const HomeScreen: React.FC<TopPromptProps>  = ({showSideBar=false, setIdList, id
   
     useEffect(() => {
       setWidthView(window.innerWidth)
+      if(idList==='6' && widthView < 540 )
+      {
+        setShowSideBar(false)
+      }
     }, [])
 
     return (
